@@ -1,0 +1,47 @@
+Trigraph Sequences
+
+In general you can use a question mark directl y in a string. The \? escape sequence only exists because there
+are nine special sequences of characters called tri g raph sequences that are three-characters sequences for
+representing each of the cha racters #, [,], \, ^, ~, \, {, and }:
+
+??= conver ts to # ??( conver ts to [ ??) conver ts to ]
+
+??/ conver ts to \ ??< conver ts to { ??> conver ts to }
+
+??' conver ts to ^ ??! conver ts to | ??- conver ts to ~
+
+These are there for when it is necessar y to write C code in the International Or ganization for Standardization
+ ISO invariant cod e set, wh ich d oes not have th ese characters. This is unlikely to apply to you.
+You can completely forget about all this unless you want to write a statement suc h as:
+
+printf("What??!\n");
+
+The output produced by this statement wi ll be: What|
+
+The trigraph ??! will be co nv e r ted to | . To get the output you intended, you need to write
+the statement as: printf("What?\?!\n");
+
+Now the trigraph sequence does not appear because the second question mark is specified by its escape sequence.
+
+Your compiler may well issue a warning when you use a trigraph sequence because usually it is unintended.
+
+The Pre processor
+
+In the example I explained how you use a preprocessin g directive to include the contents of a header file into
+your source file. The preprocessing phase of compilation can do much more than this. As well as directives,
+your source file can contain macros. A macro is an instruction to th e preprocessor to add to or modify
+the C statements in the program.
+
+A macro can be something as simple as defining a symbol, such as INCHES_PER_FOO T to be replaced by 12
+wherever the symbol appears. The directive to do this is:
+
+#define INCHES_PER_FOOT 12
+
+With this directive at t he beginning of your source file, wherever INCHES_PER_FOOT appears in the code,
+it will be replaced by 12 . For example:
+
+printf( "There are %d inches in a foot.\n", INCHES_PER_FOOT);
+
+After preprocessing, t his statement wi ll be:
+
+printf("There are %d inches in a foot.\n", 12)

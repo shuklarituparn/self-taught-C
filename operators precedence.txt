@@ -1,0 +1,50 @@
+Operator precedence determines the groupng of term in an expression and decides how an expression is evaluated
+
+Multiplication and division have higher precedence than adition and subtraction that's wy they are performed first
+
+What is the two operator have same precedence
+
+1. Then the associativity rule is performed
+
+2. If they share an operand then the operation is performed in the order as they occur.
+
+ * For most operator the order is from left to right
+
+ 1==2!= 3
+
+ 1==2 executes first resulting in zero. Then 2!=3 executes resulting in 1
+
+ ##############################################################################################################
+
+ --------------------------------------TABLE OF PRECEDENCE-----------------------------------------------------
+
+ 1. Post fix:  (),[],->, ++, --    The associativity in these is from left to right
+
+ 2. Unary:  +, -, !, ~, ++, --, type()*. sizeof  The associativity in these is from right to left
+
+ 3. Multiplicative  *, /, !  Associativity is from left to right
+
+ 4. Additive      +, -      Associativity is from left to right
+
+ 5. Shift        >>, <<         Associativity is from left to right
+
+ 6. Relational     <, >, <=, >=,       Associativity is from left to right
+
+ 7. Equality        ==, !=        Associativity is from left to right
+
+ 8. Bitwise AND     &       Associativity is from left to right
+
+ 9. Bitwise XOR     ^        Associativity is from left to right
+
+ 10.Bitwise  OR        |           Associativity is from left to right
+
+ 11.Logical AND        &&               Associativity is from left to right
+
+ 12.Logical OR         ||                 Associativity is from left to right
+
+ 13.Conditional         ?:                 Associativity is from right to left
+
+ 14.Assignment       =, +=, -=, *=, /=, %=, >>=, <<=, &=, ^=, |=   Associativity is from right to left
+
+ 
+

@@ -1,0 +1,37 @@
+* Many times a program is developed that asks the user to enter some data in the terminal
+
+*Information requested can be for example the amount of triangles that you want to draw
+
+*There are two ways the information can be requested from the user:
+
+1. requesting the data from the user
+
+2. supplying the data at the time of execution of the program (command-line-arguments)
+
+*We know that the main() function is a special function in C [entry point of the program]
+
+*When we define main we pass two values to it.
+
+The first one is called (argc= argument count) which is integer value specifyng the number of argumets typed on
+the command line.
+
+The second one is called (argv= is an array of character vectors or strings)
+
+*Code in which we pass commmand line argument looks like this
+
+###########CODE#######################
+
+int main (int argc, char *argv[])
+
+{
+
+-----------------
+-----------------
+-----------------
+
+}
+
+#######END OF CODE#########
+
+
+

@@ -1,0 +1,172 @@
+enum items are a data type that allows a programmer to define a variable and specify the valid values
+that could be stored into that variable. So enum is very powerful.
+
+It's actually specifying a data type. It is the key word enum,
+but you can basically have your own data type that includes certain values only.
+
+So for example, you could create a variable named myColor.
+
+If it's a certain enum type, you can set it so that it only includes or only can be assigned values
+of primary colors such as red, yellow or blue, and then no other values can be assigned to it.
+
+The compiler will give you an error.
+
+And so it's sort of like a data type that you can specify that you can create, but you so you're going
+to have to define the data type and then you're going to have to create variables of that type.
+
+So an item is the key word.
+
+So the first thing you have to do if you want to use this data type is you have to define that in type
+and give it a name, just an identifier, just like a variable name.
+And the way that you do it is you're going to use the keyword.
+
+And then after the enum keyword, you're going to provide a name like an identifier.
+And that after the identifier, you're going to pull all of the the list of valid values inside curly
+braces, and you're basically saying that this can only be these values, and then when you want to
+use the later you declare, you create a variable of that type enum.
+
+So let's see this in action here.
+
+I'm defining an enum type called primary color.
+
+This can be done as
+
+## enum Primarycolor {red, yellow, green};
+
+So I have the keyboard and then I have my name of my enum, which is primarycolor, and then I'm defining
+all the valid values for that type. see that they're enclosed inside curly braces.
+
+In this case, we have a type of enum named primary color that can only hold values of red, yellow and blue.
+And it can't store anything else if you try to assign a value to primary color or if you try to use
+the primary color data type and you try to assign a variable value, something else, it won't work.
+So this is just how we define it. We first have to define enum.
+
+Definition is just saying this is what it is.
+
+And so what we're saying here is we have a primary color in what it can be is red, yellow and blue.
+So variables that are declared to be primary color type can only be assign the values red, yellow and
+blue inside the program, no other values will work.So again, the first step to finding it, the second step
+is using it.So after we've defined it, we can then declare a variable of this type primary color and the way that
+we declare the variable now is we still use the enum keyword.
+
+We then actually have the name of the enum that we specified when we defined it.
+
+We have the name of the enum that we
+want to use, which is the one we just created called primary color, and then we just have names.
+
+So here we have two in terms of type primary color, my color and Gregscolor.
+
+So, again, this is where we're using the Enum, we've already defined what the enum can be, just
+red, yellow or blue, and now we're saying we have two variables named my color and Gregscolor that
+can only contain one of those three values, can't contain anything else.
+
+So here we're declaring a variable of primary color.
+
+## enum Primarycolor mycolor,gregscolor;
+
+Which is an item type, the only permissible values that can be assigned to these variables, these
+two variables are red, yellow and blue.
+
+## mycolor=  red;
+
+So we could say my color equals red and that's perfectly valid.
+
+We could not say mycolor=green.
+
+That won't work because those values aren't valid for that item type.
+We couldn't say my color equals Jason because my color can only contain three values of the primary
+color enum type.
+
+So this is a very powerful data type because you're essentially defining your own data types that can
+contain only certain values.Another example here would be if we create an enum that
+is of type month and here we're saying that
+
+## enum month {January, February, March, April, May, June, July, August, september,October, November, December}
+
+
+*********************** ENUM AS INTS********************************************************************
+So the compiler actually treats enumeration identifiers as integer constants.
+
+The first name in the list is 0
+
+enum month thisMonth;
+
+#### thisMonth= February;
+
+the value 1 is assigned to thisMonth (and not the name february as its the second name listed inside the enum)
+
+if you want to have specific integer value associated with the enumeration identifier, the integer can be
+assigned to the identifier when the data type is defined.
+
+### enum direction {up, down, left= 10, right};
+
+here an enumerated datatype direction is defined with the values up, down, left, and right
+up=0 because it happens first in the list
+down =1 because it occurs second in the list
+left= 10 as its value is explicitly defined as 10
+right=11 as it is the next to the left.
+
+**************************************************CHAR**************************************************
+
+Chars represent a single character such as 'a', a digit '0-9' , or a semicolon ';'
+
+Character literals use single quotes such as 'A' or 'Z'
+
+You can also declare char variables in to be unsigned
+
+ can be explicitly tell the compiler that a particular variable is a signed quantity
+
+## char broiled;
+
+## broiled= 'T'; // This is OK
+
+## broiled= T; // It is not OK as C thinks that it is a variable
+
+## broiled = "T"; // this is not OK as C thinks that its a string
+
+You can also numerical code to assign values
+
+##char = 65;
+
+C contains special characters that represent actions
+
+*backspacing
+
+*going to next line
+
+*making the terminal bell ring (or speaker beep)
+
+we can respresent these actions  by using special symbol sequences called escape sequences
+
+Escape sequences must be enclosed in single quotes when assigned to a character variable
+
+## char x= '\n';
+
+******************************COMMON ESCAPE CHARACTERS*************************************************
+
+\a = alert (ANSI C)
+
+\b= backspace
+
+\f= formfeed
+
+\n= newline
+
+\r= carriage return
+
+\t= horizontal tab
+
+\v= vertical tab
+
+\\= backslash
+
+\'= single quote
+
+\"= double quote
+
+\?= question mark
+
+
+
+
+

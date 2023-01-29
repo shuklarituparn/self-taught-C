@@ -1,0 +1,53 @@
+The goto statement is a jump statement which is sometimes also referred to as unconditional jump statement.
+
+The goto statement can be used to jump from anywhere to anywhere within a function.
+
+Syntax1      |   Syntax2
+----------------------------
+goto label;  |    label:
+.            |    .
+.            |    .
+.            |    .
+label:       |    goto label;
+
+
+In the above syntax, the first line tells the compiler to go to or jump to the statement marked as a label.
+
+Here label is a user-defined identifier which indicates the target statement. The statement immediately followed
+ after ‘label:’ is the destination statement.
+
+The ‘label:’ can also appear before the ‘goto label;’ statement in the above syntax.In the above syntax,
+ the first line tells the compiler to go to or jump to the statement marked as a label. Here label is a
+ user-defined identifier which indicates the target statement. The statement immediately followed after ‘label:’
+ is the destination statement. The ‘label:’ can also appear before the ‘goto label;’ statement in the above
+ syntax.
+
+---------------------------------------------CODE----------------------------------------------------------
+
+// C program to check if a number is
+// even or not using goto statement
+#include <stdio.h>
+
+// function to check even or not
+void checkEvenOrNot(int num)
+{
+	if (num % 2 == 0)
+		// jump to even
+		goto even;
+	else
+		// jump to odd
+		goto odd;
+
+even:
+	printf("%d is even", num);
+	// return if even
+	return;
+odd:
+	printf("%d is odd", num);
+}
+
+int main() {
+	int num = 26;
+	checkEvenOrNot(num);
+	return 0;
+}

@@ -1,0 +1,16 @@
+
+* We can add additional complex decision making to our program by adding extra "if" to if statement
+
+if(expression 1)
+  program statement 1
+
+ else
+  if (expression 2)
+   program statement 2
+
+ else
+    program statement 3
+
+The above extends the if statement from the two-valued logical statement to a three valued one
+
+

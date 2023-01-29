@@ -1,0 +1,82 @@
+C supports many different type of data. They may be assigned to a variable. The variables in C can store
+
+* type that stores integers
+
+* type that store non integral numerical values
+
+* type that store character
+
+
+Some basic data type in C;-
+
+int, float, boolean etc.
+
+
+####INT
+
+Int data type is the data type that stores the integer value
+
+It can store the integers as negative as well as non negative. as well as zero
+
+Integer values that contain 0 and x are taken as Hexadecimal (base16). Ex: int RBGG= 0xFFEF0D
+
+The values in the integer data type is stored without use of a comma. No spaces are permitted between digits
+
+###Float
+
+Data type that is used for the storage of decimal digits
+
+Floating point constants can also store scientific expression
+
+1.7e4 is a valid floating point value representing 1.7*10^4
+
+##Double
+
+The double data type is the same as type float, only with roughly twice the precision
+
+Double is used when the range provided by the float is not sufficient. It can store twice as many as significant digits
+
+Most computers represent double value using 64 bits
+
+All floating point constants are taken double by compiler
+
+To explicitly express a float constant add f or F to end of the number
+
+1.2f or 1.2F
+
+##### _Bool
+
+Boolean expression in _Bool, it's all means true or false.
+
+ It's a yes or no 0 or 1.
+
+ So it's indicated for binary choices essentially.
+
+Boolean variables are used in programs that need indicate a true or false type of answer.
+
+So for example, a variable this type might be used to indicate
+
+whether all the data has been read from a file, yes or no.
+
+Has all the data been read from a file?
+
+If it's 0, false, 1 yes, which we'll talk about now.
+
+So 0 is used to indicate a false value, 1 indicates a true value.
+
+So even though it's true or false values, the way that the data is stored in memory is 0 or 1 as a numeric.
+
+But their numerics mean that 0 means false, 1 equals true.
+
+So if you were to print out Booleans, you would see values 0 and 1 printed out, not true and false.
+
+But they mean true or false. They only can have 2 values.
+
+short int or int can be used when the memory is too low and we try to economically save it.
+
+The type long int may use large value but it stores far more greater value of int.
+
+unsigned int denotes the non-negative value of int.
+
+
+

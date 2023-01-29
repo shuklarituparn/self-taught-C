@@ -1,0 +1,78 @@
+##########################################################################################################
+
+Arithematic operators in C:
+
+
+1. "+" = Addition operator (Adds two operands)  A+B= 30
+
+2.  "-" = Subtraction operator (Subtracts second operand from the first) A-B= 10
+
+3.   "*"= Multiplies both operands = A*B=200
+
+4.    "/" = Division operator (Divides the numerator by the divider)
+
+5. "%" = Returns the reaminder of the integer division
+
+6.  "++" = Increment operator, increases the value of operand by 1 (A++)
+
+7.  "--"= Decrement operator, decreases the vaue of the operand by 1 (A--)
+
+##########################################################################################################
+
+Logical Operator
+
+&& == Called logical AND operator. If both the operands are non-zero, then the condition becomes true
+
+||== Called logical OR operator. If any of the operands is non-zero, then the condition becomes true
+
+!== Called Locial NOT Operator. It is used to reverse the logical state of its operands.
+
+    If a condition is true than the logical NOT operator will make it false. !(A&&B) is true
+
+
+###########################################################################################################
+
+Assignment operator
+
+1. = Simple assignment operator . C= A+B will assign the value of A+B to C
+
+2. += Add AND assignment operator. It adds the right operand to the left and assigns the value of the total to the left
+      C+= A is equal to C= C+A
+
+3. -= Subtract AND assignment operator. It subtracts the right operand from the left and assigns the values to the left
+
+4.  *=  Multiply AND assignment operator. It multiplies the operand from the right to the left and then assigns the value to the left
+
+5.  /=  Divide AND assignment operator. It divides the left operand with the right operand and assigns the results to the left operand
+
+6. %= Modulus AND assignment operator. It assignes the modulus value to the left variable.
+
+7. <<= Left shift and assignment operator. C<<=2 is equal to C= C<<2
+
+8. >>=2 Right shift and assignment operator. C>>=2 is equal to C= C>>2
+
+9. &= Bitwise AND assignment operator. C&=2 is equal to C= C&2
+
+10. ^= Bitwise exclusive OR operator. C^=2 is equal to C= C^2
+
+11. |= Bitwise inclusive OR operator. C|=2 is equal to C= C|2
+
+############################################################################################################
+
+RELATIONAL OPERATORS
+
+
+1. == Checks if the value of the both operands are true or not. If its true than the value (A==B) returns true
+
+2. != Checks if the value of the two operand are true or not. If the value of the operand are not eual then
+       the value of the expression becomes true.(A!=B)
+
+3. > Checks if the value of the left operand is greater than the right operand. If it is then the condition becomes true
+
+4. < Checks if the value of the left operand is smaller than the right operand. If it is then the condition becomes true.
+
+5. >= Checks if the value of the left operand is greater or equal than the right operand. If it is than it returns true
+
+6. <= Checks if the value of the left operand is smaller or equal to the right. If yes, then it returns true
+
+###############################################################################################################

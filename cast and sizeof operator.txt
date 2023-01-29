@@ -1,0 +1,74 @@
+#########################################################################################################
+TYPE CONVERSION
+
+*Conversion of data between different data type usually happens automatically (implicit conversion) or
+by the language or explicit by the program
+
+*to effectively create C program, the rules used for the implicit conversion must be understood
+
+*When the floating point is assigned to any integer the decimal point automatically gets truncated
+
+int x= 0;
+float k= 12.125
+x=k;
+
+now the value of x would be 12
+
+
+*assigning any integer value to the float variable would not change a thing.
+
+*If two operands are integer then the resulting remainder after the division would be also integer.
+
+It doesn't matter if the result is int
+
+*If one operand is int and the other operand is float then the resulting number would be float
+
+############################################################################################################
+
+*It is possible to demand the precise type conversion that we want
+
+*It is called a cast and consists of preceding the quantity with the name of desired type in paranthesis
+
+*Parantheses and type name together consists a cast operator i.e. type
+
+*The actual type desired, such as long, is substituted for the word type.
+
+*The type cast operator has the highest precedence except the unerary plus and minus
+
+(int) 21.51 + (int) 26.99
+
+wil be calculated in C as 21+26
+
+###########################################################################################################
+
+SIZEOF() Operator-----
+
+* You can find out how many bytes are stored in memory by a given type by using the sizeof() operator
+
+*Size of is a special keyword in C
+
+*Sizeof is actually a operator, and not a function in C
+
+*Sizeof is evaluated at compile time and not at run-time. Unless a varable-length array is used in its argument
+
+*The argument to the sizeof() operator can be variable , an array name, the name of basic data type, the name
+of derived data type, or an expression
+
+*sizeof(int) will return the number of bytes occupied by variable of type int.
+
+*use of sizeof operator whenever possible to avoid having to calculate and have hard-code size into program
+
+#############################################################################################################
+
+Other operator
+-
+
+The asterisk is an operator that represents pointer to a variable "*"
+
+ *a;
+
+ ?: is an operator used for comparison
+
+ If condition is true ? then value X: otherwise value Y
+
+

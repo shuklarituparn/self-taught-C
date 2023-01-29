@@ -1,0 +1,23 @@
+* Nested if statements means we can use one if or else statements inside one if or if or else statements
+
+if (boolean expression 1){
+
+    //executes while the boolean expression 1 is true
+
+    if (boolean expression 2){
+
+        //executes if the boolean expression 2 is true
+    }
+}
+
+############################################################################################################
+
+Nested IF code example:
+
+if(gameIsOver==0)
+ if(playertomove==you)
+  printf("Your move\n");
+ else
+  printf("My move\n");
+else
+ printf("Game over\n");

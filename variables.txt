@@ -1,0 +1,37 @@
+/* Data while executing a program is stored in a RAM also called as Random Acess Memory.
+
+#.Data in Ram is stored till computer is connected to a power source. After the loss of power the data is lost
+
+# Storage of data can be thought of storing it in a box where the fulled box denotes 1 and the empty one is 0
+
+# Each box respresents one binary digit either 0 or 1
+
+# Each box is called a Bit
+
+# Bits in memory are stored in group of 8 called Byte.
+
+# Each byte is numbered with a number (Address)
+
+# Address of a byte is the unique address of that byte in computer memory
+
+@@ VARIABLES@@
+
+# Constants are the type of data that doesn't change their value throughout the life of the program
+
+# Variables are the type of data that may changed or value assigned as the programs progress
+
+# Variables are names of computer memory locations that store values in a program
+
+# The naming rules of variables state that a variable can be declared by starting with  a letter or underscore (_)
+and can be followed by any combination of letter, 0-9 or underscore
+
+example:  Jason, _Variable, jX67
+
+# Declaring a variable is when we declare the type and then the variable name
+
+# The variables are declared as (type-specifier) (variable-name)
+
+# To declare more than one variable either type them in a new line or seperate them by comma
+
+# C requires all the variable to be declared before using. To assign the value to a variable we use "=" sign
+

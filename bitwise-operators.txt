@@ -1,0 +1,70 @@
+C offers bitwise logical operators and shift operators:
+
+      * looks something like the logical operators but different
+
+      *operate on the bits in the integer value
+
+
+Not used in the common program:
+
+*One major use of bitwise AND (&), and the bitwise or (|), is to test and set individual bits in an integer variable
+
+     Can use individual bits to store data that involve one of the two choices.
+
+*You could use a single integer variable to store several charasterisitcs of a person
+
+   *store whether the person is male or female with one bit.
+
+   *Use three other bits to specify if the person can speak french,german, or italian
+
+   *Another bit to record if the persons salary is $50,000 or more
+
+   *in just 4 bits we have substantial bit of data set.
+
+############################################################################################################
+
+BINARY Operators
+
+* A binary number is any number that includes only ones and zeroes
+
+* The number can be of any length
+
+*Example of the binary number 0, 011010101, 10101010101111000000
+
+############################################################################################################
+
+* Each position for a binary number has a value
+
+* For each digit, multiply the digit by its positional values.
+
+* add up all the product to get final result.
+
+* In general the position values in binary are power of two
+
+############################################################################################################
+
+    The & (bitwise AND) in C or C++ takes two numbers as operands and does AND on every bit of two numbers.
+    The result of AND is 1 only if both bits are 1.
+
+
+    The | (bitwise OR) in C or C++ takes two numbers as operands and does OR on every bit of two numbers.
+    The result of OR is 1 if any of the two bits is 1.
+
+
+    The ^ (bitwise XOR) in C or C++ takes two numbers as operands and does XOR on every bit of two numbers.
+    The result of XOR is 1 if the two bits are different.
+
+
+    The << (left shift) in C or C++ takes two numbers, left shifts the bits of the first operand,
+    the second operand decides the number of places to shift.
+
+
+    The >> (right shift) in C or C++ takes two numbers, right shifts the bits of the first operand,
+    the second operand decides the number of places to shift.
+
+
+    The ~ (bitwise NOT) in C or C++ takes one number and inverts all bits of it.
+
+    ######################################################################################################
+
+    

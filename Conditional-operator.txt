@@ -1,0 +1,31 @@
+The conditional operator is a unique operator
+
+*Unlike any other operator in C that are binary or unary, it is a ternary operator (accepts three value at once)
+
+The two symbol that are used to represent it are question mark (?) and semi-colon (;)
+
+The first operand is put before (?)
+
+The second one is put after the (?) and before (:)
+
+The third one is put after the (:)
+
+condition (?) expression 1 (:) expression 2
+
+##################################################################################################################
+
+The conditional operator evaluates to one of two expression depending on whether the logical expression
+evaluated to true or false
+
+*The ? character follows the logical expression, condition
+
+*On the right of ? are two operands, expression 1, and expression 2, that represent choices.
+
+*The value that results from the expression will be the value of expression 1 if the condition evaluates true
+
+*If the condition evaluates as false the resulting value will be expression 2.
+
+example: x= y>7 ? 25:50
+
+Here the value X will take will be 25 if y>7 or 50 if that's not the case.
+

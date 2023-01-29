@@ -1,0 +1,38 @@
+Format specifiers are used when dispalying variables as output
+
+* they specify the type of data of variable to be displayed
+
+## int sum=89;
+## printf(" The sum is %d \n", sum );
+
+The printf() function can display as output the values of variables
+
+* has two items or arguments enclosed within the parantheses
+
+* arguments are seperated by comma
+
+* first argument to the printf() routine is always the character string to be displayed.
+
+*along with the display of the character string.
+
+The percent character inside the first argument is special character recognized by printf() function
+
+* The character that immediately follows the percent sign specifies what the type of value is to be displayed
+
+Specifier 	Used For
+%c 	a single character
+%s 	a string
+%hi 	short (signed)
+%hu 	short (unsigned)
+%Lf 	long double
+%n 	prints nothing
+%d 	a decimal integer (assumes base 10)
+%i 	a decimal integer (detects the base automatically)
+%o 	an octal (base 8) integer
+%x 	a hexadecimal (base 16) integer
+%p 	an address (or pointer)
+%f 	a floating point number for floats
+%u 	int unsigned decimal
+%e 	a floating point number in scientific notation
+%E 	a floating point number in scientific notation
+%% 	the % symbol

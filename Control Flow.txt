@@ -1,0 +1,57 @@
+The statements in the program are executed from top to bottom, in order that they appear
+
+Control flow statements, break the flow of execution of the program by conditionally allowing program to
+conditionally particular block of code.
+
+* Decision-making statements (if-then, if-then-else, switch,goto)
+
+*Looping statements (for, while, do-while)
+
+*brancing statements (break, continue, return)
+
+################################################################################################################
+
+---------------------------------DECISION MAKING----------------------------------------------------------
+
+*Structures require that programmer specify one or more condition to be evaluated or tested by the program
+
+*if a condition is true then a statement or statements are executed
+
+*If the condition is false then the other statements are executed
+
+################################################################################################################
+
+IF Statement:  An if statement consists of boolean expression followed by one or more expression
+
+If...ELSE Statement: An if else statement has an optional else statement that gets executed if the previous
+                     expression becomes false
+
+nested if statement: You can use one if or else statement inside another if or else statement
+
+###############################################################################################################
+
+--------------------------------------------Repeating code----------------------------------------------------
+
+There maybe a situation where you need to execute a block of commands several numbers of times
+
+*The statements are executed sequentially. Top most line executes first and then other line of code
+
+*loop statment allows us to run the command code at any number of times
+
+* A loop becomes an infinite loop if the connditon never becomes false
+
+#############################################################################################################
+---------------------------------------------Loop types------------------------------------------------------
+
+1. While loops: If repeats a statement or group of condition till the condition is true. It tests the condtion
+                before executing a loop body.
+
+2. For loops: It executes the statements multiple number of times and abbreviates the the code that manages the
+              loop variable.
+
+3. Do.....While loops: It is similar to the while loop, but in this case the end statements are at the end.
+
+
+4. Nested loop: We can use one or more loop inside any While, FOR, DO.....While loop.
+
+##############################################################################################################
