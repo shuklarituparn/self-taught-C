@@ -1,0 +1,19 @@
+String in C programming is a sequence of characters terminated with a null character ‘\0’.
+Strings are defined as an array of characters. The difference between a character array and a
+string is the string is terminated with a unique character ‘\0’.
+
+Declaration of Strings
+
+Declaring a string is as simple as declaring a one-dimensional array.
+Below is the basic syntax for declaring a string.
+
+//char str_name[size];//
+
+char str[] = "GeeksforGeeks";  //initializing without a size, name acts as a pointer
+
+char str[50] = "GeeksforGeeks";//initializing one with a size, 1 extra space needed for null char
+
+char str[14] = { 'G','e','e','k','s','f','o','r','G','e','e','k','s','\0'};  //char by char assign. end must be "\0"
+
+str:-            G           e           e          k            s            \0
+address:-      0x23452     0x23453     0x23454    0x23455      0x23456      0x23457
