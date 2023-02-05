@@ -17,3 +17,128 @@ char str[14] = { 'G','e','e','k','s','f','o','r','G','e','e','k','s','\0'};  //c
 
 str:-            G           e           e          k            s            \0
 address:-      0x23452     0x23453     0x23454    0x23455      0x23456      0x23457
+
+/*
+
+Can't assign arrays in C as well as can't assign strings
+
+// C program to illustrate strings
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+	// declare and initialize string
+	char str[] = "Geeks";
+
+	// print string
+	printf("%s\n", str);
+
+	int length = 0;
+	length = strlen(str);
+
+	// displaying the length of string
+	printf("Length of string str is %d", length);
+
+	return 0;
+}
+
+*/
+
+***************************************************//taking user input//************************************************
+
+// C program to read string from user
+#include<stdio.h>
+
+int main()
+{
+	// declaring string
+	char str[50];
+
+	// reading string
+	scanf("%s",str);
+
+	// print string
+	printf("%s",str);            //%s is for a null terminated string i.e. which ends in \0
+
+	return 0;
+}
+
+The ‘&’ sign is used to provide the address of the variable to the scanf() function to store the value read in memory.
+As str[] is a character array so using str without braces ‘[‘ and ‘]’ will give the base address of this string.
+That’s why we have not used ‘&’ in this case as we are already providing the base address of the string to scanf.
+
+*************************************************//taking line of text//************************************************
+
+// C program to illustrate
+// fgets()
+#include <stdio.h>
+#define MAX 50
+int main()
+{
+	char str[MAX];
+
+	// MAX Size if 50 defined
+	fgets(str, MAX, stdin);
+
+	printf("String is: \n");
+
+	// Displaying Strings using Puts
+	puts(str);
+
+	return 0;
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PASSING STRING TO FUNCTIONS
+
+// C program to illustrate how to
+// pass string to functions
+#include <stdio.h>
+
+void printStr(char str[]) { printf("String is : %s", str); }
+
+int main()
+{
+	// declare and initialize string
+	char str[] = "GeeksforGeeks";
+
+	// print string by passing string
+	// to a different function
+	printStr(str);
+
+	return 0;
+}
+
+We can’t read a string value with spaces, we can use either gets() or fgets() in the C programming language.
+
+************************************************//Strings and Pointers//************************************************
+
+
+// C program to print string using Pointers
+#include <stdio.h>
+
+int main()
+{
+
+	char str[20] = "GeeksforGeeks";
+
+	// Pointer variable which stores
+	// the starting address of
+	// the character array str
+	char* ptr = str;
+
+	// While loop will run till
+	// the character value is not
+	// equal to null character
+	while (*ptr != '\0') {
+		printf("%c", *ptr);
+
+		// moving pointer to the next character.
+		ptr++;
+	}
+
+	return 0;
+}
+
+

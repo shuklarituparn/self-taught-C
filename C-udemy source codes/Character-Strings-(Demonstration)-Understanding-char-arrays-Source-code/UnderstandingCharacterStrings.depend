@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1511142506 source:c:\users\jfedin\downloads\understandingcharacterstrings\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
