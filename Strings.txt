@@ -181,3 +181,31 @@ printf("Final destination string |%s|", dest);
 
 
 
+******************************************//Comparing  strings//********************************************************
+
+if we want to compare two strings we can't use "==" as it will only check if the string has the same address
+
+*there is a function called strcmp() for comparison of two strings
+
+    *doesn't compare array, only string stored in different arrays
+    *doesn't compares character
+
+*it returns 0 if two string arguments are the same
+                *value <0 then str1 is less than str2
+                *value >0 then str2 is less than str1
+
+
+*the strcmp() function compares strings till it finds corresponding character that differs
+                *searching till the end of one string
+
+*the strcmp() function compares the strings until they differ, or it reaches number of character specified by the third
+argument
+"
+    *example: if wanted to limit the search to "astro" it's better to limit the comparison to the first 5 char
+
+if(strncmp("astronomy","astro",5)==0{
+        printf("found: astronomy");
+}
+if(strncmp("astounding", "astro", 5)==0){
+        printf("Found: astounding");
+}
