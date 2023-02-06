@@ -141,4 +141,43 @@ int main()
 	return 0;
 }
 
+******************************************//Concatenating n copying strings//*******************************************
+
+strcat() function takes two values:
+
+                                * A copy of the second string is stacked on the end of the first
+                                *The combined version becomes the new string
+                                *Second string is not altered in any way
+
+*It returns the value of the first argument
+                                *The address of the first character of the string to which the second string is added
+
+char myString[]= "my string";
+char input[80];
+
+printf("Enter a string to be concatenated: ");
+char input[80];
+
+printf("\n the string %s concatenated with %s is::::::::\n",myString, input);
+printf("%s", strcat(input, myString));
+
+///////////////// IMP:
+
+The strcat() function doesn't check the space in the string before concatenating it. It creates overflow problems.
+
+use strncat() instead
+        *takes a second argument asking maximum number of character to add
+
+strncat(bugs,addon,13) will add the contents of the addon string to bugs, stopping when it reaches 13 additional
+characters or the null characters, whichever comes first.
+
+char src[50], dest[50];
+
+strcpy (src, "This is source");   //copying "This is source" to src
+strcpy(dest, "This is destination");
+
+strncat(dest, src, 15);
+printf("Final destination string |%s|", dest);
+
+
 
