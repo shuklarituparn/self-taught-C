@@ -275,3 +275,12 @@ isblank() standard blank char
 isspace() whitespace char
 ispunct() printing character for which isspace() and isalnum() returns false
 
+using #include<stdlib.h> can make string to numerical
+
+atof() ----string to double
+atoi()------string to integer
+atol()------string to long
+atoll()------string to double long
+strtod()-----string to double from intial part of the string
+strtof()-------string to float
+strtold()--------string to long double
