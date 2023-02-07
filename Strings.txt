@@ -232,4 +232,46 @@ int *pNumber= &Number;
 
 to get the value of the pointer just use *
 
+*****************************************//Searching string for char//**************************************************
+
+to the strchr() we provide 2 arguments.
+                            1. Address of the char array
+                            2. Character that we are looking for
+
+the function will return a pointer to location where the char is.
+                            *address of the location of the char in memory
+                            * of type char* (pointer to char)
+
+to store this value, need a var thar can store it
+                             *in case of unsuccessful search will return a null pointer
+
+char str[]= "quick brown fox";     //string that we want to search
+char ch='q';                            //character we want
+char *pGot_char= NULL;                     //initializing the pointer var
+pGot_char=strchr(str,ch);    //stores the address of the char in the pointer variable
+
+***************************************//Searching string for string//**************************************************
+
+similar to strchr() we have strstr()
+
+char str[]= "quick brown fox";     //string that we want to search
+char word []='quick';                            //string we want
+char *pFound= NULL;                     //initializing the pointer var
+pFound=strstr(str,word);
+
+Search is case-sensitive.
+
+***************************************//Useful string functions//******************************************************
+
+islower() to check lowercase
+isupper() to check for uppercase
+isalpha() to check if it is an alphabet
+isalnum() uppercase or lowercase letter or digit
+iscntrl() control character test
+isprint() any printing char inc space
+isgraph() any printing char except space
+isdigit() decimal digit check
+isblank() standard blank char
+isspace() whitespace char
+ispunct() printing character for which isspace() and isalnum() returns false
 
