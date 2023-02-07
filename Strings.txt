@@ -209,3 +209,27 @@ if(strncmp("astronomy","astro",5)==0{
 if(strncmp("astounding", "astro", 5)==0){
         printf("Found: astounding");
 }
+
+******************************************//Searching strings//*********************************************************
+
+To search a single character use strchr()
+To search a string use strstr()
+
+*****************************************//Tokenizing strings//*********************************************************
+
+Breaking a sentence into words is tokenizing
+
+use: strtok()
+
+*****************************************//Pointers in strings//********************************************************
+
+pointer is a variable that stores a memory address of some other variable
+
+int number =23
+int *pNumber= &Number;
+
+* used to declare a pointer. *pNumber is a pointer that contains the address of the var. Number
+
+to get the value of the pointer just use *
+
+
