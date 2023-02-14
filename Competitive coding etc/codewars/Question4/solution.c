@@ -20,9 +20,9 @@ int main(){
 int checkingIsogram(char *array){
 
     int count =0;
-    for (size_t i = 0; i< sizeof(array)-1; ++i) {
-        for (size_t j = 1; j< sizeof(array)-1; ++j) {
-            printf("%c---i\n", array[i]);
+    for (size_t i = 0; array[i] !='\0'; ++i) {
+        printf("%c---i\n", array[i]);
+        for (size_t j = 1; array[j]  != '\0'; ++j) {
             printf("%c---j\n", array[j]);
         }
     }
