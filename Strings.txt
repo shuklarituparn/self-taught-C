@@ -284,3 +284,27 @@ atoll()------string to double long
 strtod()-----string to double from intial part of the string
 strtof()-------string to float
 strtold()--------string to long double
+
+***************************************//Passing string to a function//*************************************************
+
+
+The accepted convention of passing C-strings to functions is to use a pointer:
+
+void function(char* name)
+When the function modifies the string you should also pass in the length:
+
+void function(char* name, size_t name_length)
+Your first example:
+
+char *functionname(char *name[256])
+passes an array of pointers to strings which is not what you need at all.
+
+Your second example:
+
+char functionname(char name[256])
+passes an array of chars. The size of the array here doesn't matter and the parameter will decay to a pointer anyway, so this is equivalent to:
+
+char functionname(char *name)
+See also this question for more details on array arguments in C.
+
+************************************************************************************************************************

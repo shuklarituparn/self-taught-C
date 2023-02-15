@@ -12,5 +12,5 @@ int main(){
     printf("Enter the string: ");
     scanf("%s", str);
     printf("The string you entered is %s", str);
-    //printf("The number of characters in string is: %d", numOfChar(str[]));
+    printf("The number of characters in string is: %d", numOfChar(str));
 }

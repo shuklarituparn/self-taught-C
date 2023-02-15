@@ -22,15 +22,7 @@ int numberOfcharacter(char *array){
     int count=0;
     //const size_t x= sizeof(array);
     for(int i=0; array[i]!= '\0'; ++i){
-        for (int j = 1; array[j]!= '\0'; ++j) {
-            if(array[i]== array[j]){
-                printf("Matching element found: ");
-            }
-            else{
-                printf("Matching element not found");
-            }
 
-        }
         //printf("%c", array[i]);
         count++;
     }
