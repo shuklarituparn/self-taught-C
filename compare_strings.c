@@ -32,5 +32,13 @@ bool compare_strings(const char *string1,const char *string2){
         }
         else
             return false;
+
     }
 }
+
+/*
+ * Currently this code has an issue of not incrementing i
+ * if i declare ++i later it says unreachable code as the return statement makes the program exit before
+ * I'll try to fix the problem by declaring the boolean flag and trying to change the value of the flag
+ *
+ */
