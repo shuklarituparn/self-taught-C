@@ -1,4 +1,7 @@
 //
+// Created by rituparn on 15.02.23.
+//
+//
 // Created by rituparn on 14.02.23.
 //
 
@@ -15,7 +18,7 @@ int main(){
     scanf("%s", string);
     checkingIsogram(string);
 
-   //printf("The string is isogram or not: %d", checkingIsogram(string));
+    //printf("The string is isogram or not: %d", checkingIsogram(string));
 
 }
 
