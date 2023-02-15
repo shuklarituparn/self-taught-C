@@ -1,6 +1,4 @@
-//
-// Created by rituparn on 15.02.23.
-//
+
 //
 // Created by rituparn on 14.02.23.
 //
@@ -45,7 +43,12 @@ int checkingIsogram(char *array){
         }
 
     }
-    return count;
+    if (count>0){
+        return false;
+    }
+    else
+        return true;
+
 }
 
 /*
