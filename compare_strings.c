@@ -25,14 +25,14 @@ int main(){
     return 0;
 }
 bool compare_strings(const char *string1,const char *string2){
-    bool flag= false;
+    bool flag= false; //made the flag to false
     int i=0;
-    while(string1[i]&&string2[i]!='\0'){
-        if(string1[i]==string2[i]){
-            flag=true;
+    while(string1[i]&&string2[i]!='\0'){ //and operator checks both the strings
+        if(string1[i]==string2[i]){    //if the string matches
+            flag=true;        //changing the flag
         }
         else
-            flag=false;
+            flag=false; //else returning the same value of the flag;
         ++i;
     }
     return flag;
