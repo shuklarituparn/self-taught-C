@@ -7,7 +7,6 @@
 
 #include <stdio.h>
 #include <stdbool.h>
-#include <string.h>
 #include <ctype.h>
 
 
@@ -25,13 +24,13 @@ int main(){
 }
 
 int checkingIsogram(char *array){
-    int count =0;
+    bool flag= false;
 
     for (int i = 0; array[i] != '\0'; ++i) {
         for (int j = 0; array[j] != '\0'; ++j){
             if(i!=j){
-                if(tolower(array[i])== tolower(array[j])){
-                    count++;
+                if(tolower(array[i])!= tolower(array[j])){
+                    flag=true;
                 }
                 else
                     continue;
@@ -42,11 +41,10 @@ int checkingIsogram(char *array){
         }
 
     }
-    return count;
+    return flag;
 }
 
 /*
- * The problem in this loop is that it looks at the element in the array and then counts the duplicate element too
- *
- *for example: for a string with elements "abc" it counts a while the outer loop is at a or b when outer loop is at b
+I don't know why I can't solve it using a bool flag. It works good with the count. But everytime I try to declare
+ a flag I get error in final solution
  */
