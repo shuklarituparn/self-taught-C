@@ -25,20 +25,19 @@ int main(){
     return 0;
 }
 bool compare_strings(const char *string1,const char *string2){
+    bool flag= false;
     int i=0;
     while(string1[i]&&string2[i]!='\0'){
         if(string1[i]==string2[i]){
-            return true;
+            flag=true;
         }
         else
-            return false;
-
+            flag=false;
+        ++i;
     }
+    return flag;
 }
 
 /*
- * Currently this code has an issue of not incrementing i
- * if i declare ++i later it says unreachable code as the return statement makes the program exit before
- * I'll try to fix the problem by declaring the boolean flag and trying to change the value of the flag
- *
+ * Finally fixed the problem.
  */
