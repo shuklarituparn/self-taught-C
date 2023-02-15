@@ -24,6 +24,6 @@ int main(){
 
 int checkingIsogram(char *array){
     for (int i = 0; array[i] != '\0'; ++i) {
-        printf("The characters in the string are %c\n",array[i] );
+        printf("The characters in the string are %c\n",array[i] ); //ok, finally correctly looping on the array
     }
 }
