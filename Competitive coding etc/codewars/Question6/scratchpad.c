@@ -12,7 +12,7 @@ int main(){
 
 void print( char *string){
     for (int i = 0; string[i]!='\0' ; ++i) {
-        printf("%s", string[i]);
+        printf("%c", string[i]);
     }
 
 }
