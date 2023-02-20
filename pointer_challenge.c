@@ -15,8 +15,9 @@ int main(){
     int x= 10; //variable with hard_coded value
     int *pInt= &x;
     printf("The address of the pointer is: %p\n", &pInt);
-    printf("The value of the pointer is : %p", pInt);
-    printf("The value of what the pointer is pointing to is: %d", *pInt);
+    printf("The value of the pointer is : %p\n", pInt);
+    printf("The value of what the pointer is pointing to is: %d\n", *pInt);
+    printf("The address of the variable is : %d", &x);
 
     return 0;
 
