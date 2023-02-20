@@ -6,7 +6,7 @@
 
 int main(){
     int x=25;
-    const int *pInt= &x; //constant pointer to the variable x. The address of pInt can't change.
+    cosnt int *pInt=&x; //constant pointer to the variable x. The address of pInt can't change.
     printf("The value of x is %d\n", x);
     printf("The value of pointer is %p\n", pInt);
     printf("The adress of variable is: %p\n", &x);

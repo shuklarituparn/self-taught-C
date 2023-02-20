@@ -308,3 +308,7 @@ char functionname(char *name)
 See also this question for more details on array arguments in C.
 
 ************************************************************************************************************************
+
+pointers and array: Both array[i] and *(array+i) are correct notation.
+
+ar++ only works if arr is a pointer variable
