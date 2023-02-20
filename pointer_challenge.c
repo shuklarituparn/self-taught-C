@@ -16,8 +16,13 @@ int main(){
     int *pInt= &x;
     printf("The address of the pointer is: %p\n", &pInt);
     printf("The value of the pointer is : %p\n", pInt);
+    printf("The address of the variable is : %p\n", &x);
     printf("The value of what the pointer is pointing to is: %d\n", *pInt);
-    printf("The address of the variable is : %d", &x);
+
+    /*
+     * We can see that the value that the pointer is holding is just the address of the variable
+     */
+
 
     return 0;
 
