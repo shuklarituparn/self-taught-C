@@ -1,0 +1,15 @@
+
+*valuesPtr can be used to access the first element of the values array. That is value[0]
+
+to reference values[3] through the valuesPtr just add 3 to valuesPtr and use the indirection operator
+
+*(valuesPtr+3)
+
+The expression *(valuesPtr+i) can be used to access the value in the values[i]
+
+to set the value[10] to 27 we can do value[10]=27
+
+or we can use the pointers to indirectly update the value at that location:
+
+*(valuesPtr+10)=27 //we're just taking the first address going 10 elements after it and assigning the value 27 to it.
+
