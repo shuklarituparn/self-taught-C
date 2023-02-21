@@ -114,3 +114,15 @@ int *pNumber= (int*) calloc(number_of_element, sizeof(size_of_each_element));
     *. returns the void* pointer to the new memory or NULL if the operation failed for some reason
 
 *. realloc() preserves the content of the original memory area.
+
+*******************************************// guidelines //*************************************************************
+
+*. Avoid allocating many small blocks of memory
+        *. allocating the space on heap has some overhead to it
+        *. allocating many small blocks of memory will carry a large overhead then smaller large blocks
+
+*. Only hang on the memory till its needed
+        *. remember to release it as soon as its not needed
+
+*. Always remember to release the memory
+        *. decide where the program will require the memory and release it as soon as it's not needed
