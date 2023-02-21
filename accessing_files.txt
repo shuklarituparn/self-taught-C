@@ -1,0 +1,79 @@
+A program references a file through a file pointer or a stream pointer.
+
+Since it works on more than just a file,  the standard io functions work on any device.
+
+So it's called a file pointer, but it's really should be referred to as a stream pointer.
+
+You associate a file pointer with a file programmatically when your program is run.
+
+So what you end up doing is you'll create a pointer inside your program, it'll be of type file and that's going to
+represent the file.
+
+/////////////////////////////////////////////** Opening a file **///////////////////////////////////////////////////////
+
+fopen() returns the file pointer to specific external file
+
+FILE *fopen(const char* restrict name, const char* restrict mode);
+
+*. First argument is the pointer to the string that is name of external file needed to process
+
+          *. obtain file name through command line, or as input from user, or as consst in the program
+
+*. The second argument is the character string that represents the file mode
+        *. specifies what you wanna do with the file
+        *. file mode specification is a character string between double quotes
+
+*. Assuming the call of fopen() is successful the function returns a pointer of type FILE* that can be used to reference
+the file further in the operations
+
+
+/////////////////////////////////////////////** FILE     MODES **///////////////////////////////////////////////////////
+
+File modes (only apply to the text files)
+
+"w"--- open the file for write operations. if the file has contents it is discarded
+
+"a"---- open the file for append operations. all the changes are at the end of the file
+
+"r"-----open a text file for read operations
+
+"w+"-------open a file for both reading and writing. if it exists empty the content and if it doesn't then make it
+
+"a+"--------opening a file for adding to the end (reading and writing) if file exists, or making if it doesn't
+
+"r+"-------opening a text file for updating. both reading and writing
+
+"r"----------Searches file. If the file is opened successfully fopen( ) loads it into memory and sets up a pointer that
+points to the first character in it. If the file cannot be opened fopen( ) then it returns NULL.
+
+"rb"----------Open for reading in binary mode. If the file does not exist then fopen( ) will return NULL
+
+"w"-Searches file. Contents are overwritten if the file exists. A new file is created if the file doesn’t exist.
+    Returns NULL, if unable to open the file.
+
+
+"wb"--- Open for writing in binary mode. Its contents are overwritten if the file exists, else the file will be created.
+
+"a"---- 	Searches file. If the file is opened successfully fopen( ) loads it into memory and sets up a pointer that
+  points to the last character in it. If the file doesn’t exist, a new file is created. Returns NULL, if unable to open
+  the file.
+
+
+"ab"-Open for append in binary mode. Data is added to the end of the file. A file will be created if it does not exist.
+
+"r+"---	Searches file. It is opened successfully fopen( ) loads it into memory and sets up a pointer that points to the
+ first character in it. If it is unable to open the file it Returns NULL.
+
+"rb+"----- Open for both reading and writing in binary mode. fopen( ) returns NULL if the file does not exist.
+
+"w+"------Searches file. Its contents are overwritten if the file exists. A new file is created if the file doesn’t
+           exist. Returns NULL, if unable to open the file.
+
+"wb+"--------Open for both reading and writing in binary mode. Contents are overwritten if the file exists.
+              It will be created if the file does not exist.
+
+"a+"----------Searches file. If the file is opened successfully fopen( ) loads it into memory and sets up a pointer
+   that points to the last character in it. If the file doesn’t exist, a new file is created. Returns NULL,
+   if unable to open the file.
+
+ "ab+"-------Open for both reading and appending in binary mode. A file will be created if the file does not exist.
