@@ -186,3 +186,34 @@ int main()
 ************************************************///*********************************************************************
 
 
+Limitations of C Structures
+
+In C language, Structures provide a method for packing together data of different types.
+A Structure is a helpful tool to handle a group of logically related data items. However, C structures have some
+limitations.
+
+    The C structure does not allow the struct data type to be treated like built-in data types:
+    We cannot use operators like +,- etc. on Structure variables. For example, consider the following code:
+
+struct number {
+	float x;
+};
+int main()
+{
+	struct number n1, n2, n3;
+	n1.x = 4;
+	n2.x = 3;
+	n3 = n1 + n2;
+	return 0;
+}
+
+/*Output:
+
+prog.c: In function 'main':
+prog.c:10:7: error:
+invalid operands to binary + (have 'struct number' and
+'struct number') n3=n1+n2;
+
+*/
+
+
