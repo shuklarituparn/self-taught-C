@@ -1,0 +1,63 @@
+
+Dynamic memory allocation in C
+
+Allows memory for storing data to be allocated dynamically when the program executes
+
+    *makes the use of pointer to do that
+
+Dynamic memory allocation reserves the space in the memory area called heap
+
+There's another memory area called STACK
+
+STACK: Function argument and the local variables in a function are stored here
+
+    *When the execution of the function completes, the memory allocated to store arguments and local argument is freed
+
+The difference in the memory on the stack and the heap is that the memory on the heap is controlled by the user
+
+They must keep a track record of when to allocate the memory and to free them after use.
+
+Must free space in order to re-use them
+
+*******************************************// Malloc() //***************************************************************
+
+ 1. Need to use stdlib.h header file
+
+ 2. Specify the number of bytes of memory needed as argument
+
+ 3. Returns the address of the first byte of the memory it allocated.
+
+ 4. As it returns an address, only way to put is a pointer.
+
+ //- SYNTAX -// int *pNumber= (int*) malloc(100); returns 100 bytes of memory
+
+ The command above returns 100 bytes of memory but since the int is 4 bytes it can only store 25 int.
+
+ malloc assumes that the int is 4 bytes. Inorder to remove the assumption and ask it the amount of integer we need
+
+ we do:
+
+ int *pNumber= (int*)malloc(25*sizeof(int)); //asking 25 int.
+
+ The cast (int*) converts the pointer returned by malloc to type int. This is done because malloc returns the pointer
+ of type void.
+
+ *. Can store any amount of memory that a user requests
+
+ *. If the memory that a user cannot be allocated, malloc() returns the pointer with value NULL
+
+ *. Good idea to check if the requested memory is there before trying to use it.
+
+  int *pNumber= (int*)malloc(25*sizeof(int));
+
+  if(!pNumber){
+        //Code to deal with error if there's empty request to the memory.
+  }
+
+  //Display the message and terminate the program. Much better than letting the program crash/
+
+*************************************// Releasing memory //*************************************************************
+
+After allocating memory dynamically, it's required to free it when it's no longer required
+
+*. Memory allocated on the
