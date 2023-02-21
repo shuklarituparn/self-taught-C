@@ -60,4 +60,25 @@ Must free space in order to re-use them
 
 After allocating memory dynamically, it's required to free it when it's no longer required
 
-*. Memory allocated on the
+*. Memory allocated on the heap will be automatically freed when the program ends.
+
+*. Better to release it before the programs exits.
+
+*. A memory leak happens when you dynamically allot a memory but don't posses an address to it to release it later
+
+*. occurs inside a loop. results in more and more memory being used gradually.
+
+*. To free a memory, need to have its address
+
+*To release a memory that was earlier allotted and whose address we have in a pointer.
+
+free(pNumber);
+pNumber=NULL;
+
+as long as pNumber contains the address of the memory that was allotted, it'll free the entire block of the memory.
+
+*Always set the pointer to NULL after the memory it points too have been freed.
+
+*******************************************// Calloc() //***************************************************************
+
+
