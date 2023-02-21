@@ -1,0 +1,49 @@
+
+
+******************************************// Structures in C//**********************************************************
+
+The struct keyword helps to declare structures which are just a collection of variables
+
+struct date{
+
+    int date;
+    int month;
+    int year;
+}
+
+above example shows the compiler how a structure called date looks. it doesn't have memory allocation and the variables
+inside the structures are called members.
+
+after the above declaration, variables can be declared of type struct. and memory is allocated for three int values
+
+To declare today's date we can say that:
+
+struct date today;
+
+and we can set the value as:
+
+today.day=25;
+today.year=2015;
+
+///*** to check if the month is 12 ***///
+
+if(today.month==12)
+    nextMonth=1;
+
+when it comes to evaluation of the expression. Struct members follow the rule as normal variables
+
+century= today.year/100+1
+
+////////////////////////////- DECLARING STRUCTURES AND VARIABLES AT ONCE -//////////////////////////////////////////////
+
+Can declare structures and variables at once, just have to type variable name before ending the struct
+
+struct date{
+
+    int date;
+    int month;
+    int year;
+} today;       //creating structure called date and declaring a variable of type date;
+
+
+struct date today {22,05,1999}

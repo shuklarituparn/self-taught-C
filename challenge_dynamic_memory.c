@@ -15,14 +15,14 @@ int main(){
     scanf("%d", &x);
     str=(char *) malloc(x*(sizeof (char)));
 
-    if(str!= NULL){
+    if(str==NULL){
+        printf("Memory allocation failed:");
+        return 1;
+    }
+    else{
         printf("Enter the string you want: ");
         scanf("%s", str);
         printf("The string you entered is: %s",str);
-    }
-    else{
-        printf("Memory allocation failed:");
-        return 1;
     }
     free(str);
     return 0;
