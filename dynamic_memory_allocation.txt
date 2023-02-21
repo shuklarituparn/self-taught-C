@@ -81,4 +81,19 @@ as long as pNumber contains the address of the memory that was allotted, it'll f
 
 *******************************************// Calloc() //***************************************************************
 
+*calloc() offer many adavntages above malloc()
 
+*it allocated space in the memory based on numbers of element needed and their individual size
+
+*it initializes the memory so that all bytes are zero
+
+*calloc() requires two argument values
+
+        *. Number of data items for which the space is required
+        *.size of each data items
+
+*calloc() is declared in the stdlib.h header
+
+int *pNumber= (int*) calloc(number_of_element, sizeof(size_of_each_element));
+
+*. Return value will be NULL if the memory cannot be allotted, but unlike malloc() it'll be initialized to 0
