@@ -97,3 +97,20 @@ as long as pNumber contains the address of the memory that was allotted, it'll f
 int *pNumber= (int*) calloc(number_of_element, sizeof(size_of_each_element));
 
 *. Return value will be NULL if the memory cannot be allotted, but unlike malloc() it'll be initialized to 0
+
+*******************************************// realloc() //**************************************************************
+
+*. realloc() helps us to reuse or extend the memory used  by malloc() or calloc()
+
+*. expects two argument
+        *. A pointer containing the address that was returned by a call to malloc(), calloc()
+
+        *. size in bytes to the new memory that we want allocated
+
+*. It allocates the memory specified by the second argument
+    *.transfers the contents of the previously allocatted memory referenced by the pointer that was supplied as the
+      first argument to the function.
+
+    *. returns the void* pointer to the new memory or NULL if the operation failed for some reason
+
+*. realloc() preserves the content of the original memory area.
