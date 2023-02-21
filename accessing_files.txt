@@ -77,3 +77,282 @@ points to the first character in it. If the file cannot be opened fopen( ) then 
    if unable to open the file.
 
  "ab+"-------Open for both reading and appending in binary mode. A file will be created if the file does not exist.
+
+ ********************************************// Opening files //********************************************************
+
+ Opening or Creating a file in C
+
+ To perform the opening and creation of a file in c we can use fopen() function which comes under stdio.h header file.
+
+ Syntax:
+
+     p = fopen(“fileopen”, “mode”);
+
+ Example:
+
+     p = fopen(“Hello.txt”, r);
+
+
+  ***********************************// Reading/Writing files //********************************************************
+
+  fprintf() and fscanf() are used to read and write in a text file in C programming.
+  They expect a pointer to the structure FILE since they are file versions of print() and scanf()
+
+  // C program to write contents
+  // to the file
+  #include <stdio.h>
+  #include <stdlib.h>
+
+  // Driver code
+  int main()
+  {
+  char str[20];
+  FILE* ptr;
+
+  ptr = fopen("Hello.txt", "w+");
+
+  if (ptr == NULL)
+  {
+  	printf("Error Occurred While writing to a text file !");
+  	exit(1);
+  }
+
+  printf("Enter String ");
+  fgets(str, 80, stdin);
+
+  fputs(str, ptr);
+  fclose(ptr);
+
+  return 0;
+  }
+
+ //////////////////////** Below is the C program to read the contents from the file: **/////////////////////////////////
+
+ // C program to read contents
+ // from the file
+ #include <stdio.h>
+ #include <stdlib.h>
+
+ // Driver code
+ int main()
+ {
+ char str[80];
+ FILE* ptr;
+
+ ptr = fopen("Hello.txt", "r");
+
+ if (ptr == NULL)
+ {
+ 	printf("Error While opening file");
+
+ 	// if the pointer returns NULL
+ 	// program will exit
+ 	exit(1);
+ }
+
+ if(fgets(str, 80, ptr) != NULL)
+ {
+ 	puts(str);
+ }
+ fclose(ptr);
+
+ return 0;
+ }
+
+Reading and Writing to a Binary File
+
+fread() is used to read from a binary file and fwrite() is used to write to a file on the disk.
+1. Writing to a Binary File
+
+fwrite() function takes four arguments address of data, size of the data which is to be written on the disk,
+number of data types, and a pointer to the file where we want to write.
+
+Syntax:
+
+    fwrite(const void *ptr,size_of_elements,number_of_elements, FILE *a_file);
+
+
+// C program to write to a
+// binary file
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Num
+{
+int n1, n2;
+};
+
+// Driver code
+int main()
+{
+int n;
+struct Num obj;
+FILE* fptr;
+if ((fptr = fopen("temp.bin", "wb")) == NULL)
+{
+	printf("Error! opening file");
+
+	// if file pointer returns NULL program
+	// will exit
+	exit(1);
+}
+
+for (n = 1; n < 10; n++)
+{
+	obj.n1 = n;
+	obj.n2 = 12 + n;
+	fwrite(&obj, sizeof(struct Num),
+		1, fptr);
+}
+
+fclose(fptr);
+return 0;
+}
+
+Explanation:  In the above program, we are creating a new file with the name GFG.bin.
+Structure with the name Num has been declared with two numbers – n1, n2 and created an object with the name obj.
+In for loop, we are storing values in the file with the help of fwrite() function. The first parameter takes the address
+of obj and the second takes the size of the defined structure Num.
+
+As we have only inserted one instance of obj then the third parameter will be 1. fptr will be pointing to the file
+where data is stored. And at last, we have closed the file.
+
+
+2. Reading from a Binary File
+
+fread() function also takes four arguments that are similar to fwrite() function in C Programming.
+
+Syntax:
+
+    fwrite(const void *ptr,size_of_elements,number_of_elements, FILE *a_file);
+
+
+// C Program to Read from a
+// binary file using fread()
+#include <stdio.h>
+#include <stdlib.h>
+struct Num
+{
+	int n1, n2;
+};
+
+// Driver code
+int main()
+{
+int n;
+struct Num obj;
+FILE* fptr;
+if ((fptr = fopen("temp.bin", "rb")) == NULL)
+{
+	printf("Error! opening file");
+
+	// If file pointer will return NULL
+	// Program will exit.
+	exit(1);
+}
+
+// else it will return a pointer
+// to the file.
+for (n = 1; n < 10; ++n)
+{
+	fread(&obj, sizeof(struct Num), 1, fptr);
+	printf("n1: %d\tn2: %d\n", obj.n1, obj.n2);
+}
+
+fclose(fptr);
+return 0;
+}
+
+
+Explanation: In the above program, we have read the same file GFG.bin and are looping through records one by one. We
+read a single Num record of Num size from the file pointed by *fptr into the structure Num. We’ll get the same record
+that we inserted in the previous program.
+
+
+ ///////////////////////////////////////** MOVING FILE POINTERS **//////////////////////////////////////////////////////
+
+ 1. fseek() in C Programming
+
+ fseek() function is used to set the file pointer to the specified offset and write data into the file.
+
+ Syntax:
+
+     int fseek(FILE *stream, long int offset, int whence);
+
+ Here,
+
+     whence can be SEEK_SET, SEEK_CUR and SEEK_END.
+     SEEK_END: It denotes end of the file.
+     SEEK_SET: It denotes starting of the file.
+     SEEK_CUR: It denotes the file pointer’s current position.
+
+ // C program to implement
+ // fseek
+ #include <stdio.h>
+ #include <stdlib.h>
+
+ // Driver code
+ int main()
+ {
+ char str[80];
+ FILE* ptr;
+
+ ptr = fopen("Hello.txt", "w+");
+ fputs("Welcome to GeeksforGeeks", ptr);
+
+ fseek(ptr, 11, SEEK_SET);
+ fputs("Programming ", ptr);
+ fclose(ptr);
+
+ ptr = fopen("Hello.txt", "r+");
+ if(fgets(str, 80, ptr) != NULL)
+ {
+ 	puts(str);
+ }
+
+ fclose(ptr);
+ return 0;
+ }
+
+
+////////////////////////////////////////////   REWIND   ///////////////////////////////////////////////////////////////
+
+2. rewind() in C
+
+rewind() function sets the file pointer to the beginning of the file.
+
+Syntax:
+
+    void rewind(FILE *stream);
+
+// C program to implement
+// rewind()
+#include <stdio.h>
+#include <stdlib.h>
+
+// Driver code
+int main()
+{
+char str[200];
+FILE* ptr;
+
+ptr = fopen("Hello.txt", "w+");
+fputs("Welcome to GeeksforGeeks", ptr);
+
+fclose(ptr);
+
+ptr = fopen("Hello.txt", "r+");
+if(fgets(str, 200, ptr) != NULL)
+{
+	puts(str);
+}
+rewind(ptr);
+if(fgets(str, 200, ptr) != NULL)
+{
+	puts(str);
+}
+
+fclose(ptr);
+return 0;
+}
+
