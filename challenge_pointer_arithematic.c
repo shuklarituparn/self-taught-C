@@ -12,7 +12,7 @@ int main(){
 }
 int count_char(const char *string){
     const char *pChar= string;  //storing the first address of the array
-    while(*string){    //checking if the dereferenced string is the null terminator
+    while(*string){    //checking if the de-referenced string is the null terminator
         string++;   //incrementing the string
     }
     return string-pChar;    //subtracting the end address from the beginning to give the size of the string
