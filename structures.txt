@@ -46,4 +46,143 @@ struct date{
 } today;       //creating structure called date and declaring a variable of type date;
 
 
-struct date today {22,05,1999}
+struct date today {22,05,1999} //initialising the struct with data
+
+struct date today1 {25,07}  //can actually initialize with less values. year is not initialized
+
+struct date today2 {.date =22, .month= 05, .year= 1999} can declare member name using "."
+
+struct date today3 {.date =22, .month= 05} can just initialize few members
+
+************************************************///*********************************************************************
+
+How to initialize structure members?
+
+Structure members cannot be initialized with declaration. For example, the following C program fails in the compilation.
+
+
+struct Point
+{
+int x = 0; // COMPILER ERROR: cannot initialize members here
+int y = 0; // COMPILER ERROR: cannot initialize members here
+};
+
+
+The reason for above error is simple, when a datatype is declared, no memory is allocated for it.
+Memory is allocated only when variables are created.
+Structure members can be initialized using curly braces ‘{}’. For example, the following is a valid initialization.
+
+struct Point
+{
+int x, y;
+};
+
+int main()
+{
+// A valid initialization. member x gets value 0 and y
+// gets value 1. The order of declaration is followed.
+struct Point p1 = {0, 1};
+}
+
+************************************************///*********************************************************************
+
+How to access structure elements?
+
+Structure members are accessed using dot (.) operator.
+
+#include <stdio.h>
+
+struct Point {
+	int x, y;
+};
+
+int main()
+{
+	struct Point p1 = { 0, 1 };
+
+	// Accessing members of point p1
+	p1.x = 20;
+	printf("x = %d, y = %d", p1.x, p1.y);
+
+	return 0;
+}
+
+************************************************///*********************************************************************
+
+What is designated Initialization?
+
+Designated Initialization allows structure members to be initialized in any order. This feature has been added in C99
+standard.
+
+#include <stdio.h>
+
+struct Point {
+	int x, y, z;
+};
+
+int main()
+{
+	// Examples of initialization using designated
+	// initialization
+	struct Point p1 = { .y = 0, .z = 1, .x = 2 };
+	struct Point p2 = { .x = 20 };
+
+	printf("x = %d, y = %d, z = %d\n", p1.x, p1.y, p1.z);
+	printf("x = %d", p2.x);
+	return 0;
+}
+
+************************************************///*********************************************************************
+
+What is an array of structures?
+
+Like other primitive data types, we can create an array of structures.
+
+#include <stdio.h>
+
+struct Point {
+	int x, y;
+};
+
+int main()
+{
+	// Create an array of structures
+	struct Point arr[10];
+
+	// Access array members
+	arr[0].x = 10;
+	arr[0].y = 20;
+
+	printf("%d %d", arr[0].x, arr[0].y);
+	return 0;
+}
+
+************************************************///*********************************************************************
+
+What is a structure pointer?
+
+Like primitive types, we can have a pointer to a structure. If we have a pointer to structure, members are accessed
+using arrow ( -> ) operator.
+
+#include <stdio.h>
+
+struct Point {
+	int x, y;
+};
+
+int main()
+{
+	struct Point p1 = { 1, 2 };
+
+	// p2 is a pointer to structure p1
+	struct Point* p2 = &p1;
+
+	// Accessing structure members using structure pointer
+	printf("%d %d", p2->x, p2->y);
+	return 0;
+}
+
+
+************************************************///*********************************************************************
+
+
