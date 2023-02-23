@@ -37,3 +37,8 @@ int main() {
 
     return 0;
 }
+
+/*
+ * Don't know why the fgets doesn't works just the scanf function takes the correct input and it is able to store it
+ * in the file
+ */
