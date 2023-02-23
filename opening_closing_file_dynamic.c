@@ -17,7 +17,7 @@ int main() {
     int size;
     printf("Enter the size of the string you wanna enter: ");
     scanf("%d", &size);
-    str = ((char *) malloc(size * sizeof(char)));
+    str = ((char *) malloc(size * sizeof (char)));
 
     if (!str) {
         printf("Memory allocation unsuccessful! \n");
@@ -30,7 +30,7 @@ int main() {
 
     fPtr = fopen("New_file.txt", "w+");    //Can observe a new file created
     printf("Enter the data for the file named ");
-    fgets(str, size, stdin);
+    scanf("%s",str);
     fputs(str,fPtr);
     free(str);
     fclose(fPtr);

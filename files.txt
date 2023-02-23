@@ -389,3 +389,11 @@ A file pointer is a pointer to the structure of type FILE
 
 The function fopen() is used to open a file, it takes two arguments. First is the file name and second is the mode
 
+
+************************************************************************************************************************
+
+The use of function fputs().
+
+This function helps us to enter a string that is followed by a new-line or a null terminator.
+
+
