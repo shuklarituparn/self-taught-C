@@ -356,3 +356,29 @@ fclose(ptr);
 return 0;
 }
 
+************************************************************************************************************************
+
+In C there's three steps to work with files
+
+1. Open a file
+
+2. Read the file or write the data in the file.
+
+3. Close the file.
+
+
+Writing the data is not done immmediately to the file.
+
+When we open a file a buffer is immediately attached to its file pointer. There are three types of buffers.
+
+1. Fully buffered: In this mode, the data is written to the file after the buffer gets full
+
+2. Line buffered: In this mode data is transferred to the file after encountering a newline character
+
+3. Unbuffered: In this mode, data is transferred to the file as soon as possible.
+
+Can set different buffer mode, immediately before changing any thing in the file. It's done by setbuf() or setvbuf()
+
+First the data is written into the buffer, after the buffer gets
+full, it's written to the file. When the file is  closed, the data is then written to the file even if the buffer is not
+full complete. It's called flushing the buffer, it can also be done by flush buffer command. fflush()
