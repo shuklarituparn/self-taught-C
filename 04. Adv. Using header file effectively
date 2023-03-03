@@ -1,0 +1,4 @@
+*include files help used all the definitions inside a common file
+
+*can then simply include the file in the program that wants to use that definitions
+

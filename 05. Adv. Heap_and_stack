@@ -1,0 +1,48 @@
+STACK:
+
+    *Location in the Memory that stores temporary variables
+
+    *used to keep track because the Memory is only locally available in function
+
+    *is LIFO( last in, first out) and is managed by the CPU
+
+    *variables allocated and freed automatically
+
+    *linear data structure
+
+    *when function creates a new variable it's pushed on the STACK
+
+    *everytime a function exists, all variable of function are deleted automatically
+
+    *once a stack variable is freed that location of the Memory is available to other variable
+
+    *variables cannot be resized, local variables, limited size of the stack
+
+
+HEAP:
+
+    *Heap is managed by the programmer
+
+    *Memory is accessed through the use of pointers
+
+    *explicitely allocate (malloc) and deallocate (free) the Memory
+
+    *failure to free the Memory will result in Memory leaks. Memory not used but not available
+
+    *no restriction on the size of the Heap
+
+    *variables created on the Heap are available anywhere in the program
+
+    *global in scope
+
+    *heap Memory is slightly slower to be read and written to
+
+    *use heap
+        *When need to allocate a large block of Memory
+        *when need to keep that variable around for a long time
+        *when need variable like array and structs that are dynamic in size
+
+    *use STACK
+        *when dealing with smaller variable that only need to persist as long as the function is
+        
+           

@@ -1,0 +1,47 @@
+* Methods can be used so that modules contained in the seperate files can effectively
+communicate
+
+*if a function from a file needs to call a function in a different file
+
+    *a function call can be made in the normal fashion
+
+    *arguments can be passed and returned the original way
+
+*in the file that calls the function, make sure to include the protoype
+
+*up to the user to provide correct information as the compiler compiles each files seperately
+
+*function contained in the seperate files can communicate through external variables
+
+    *an extention to the concept of global variables
+
+
+an external variable is the variable whose value can be changed by another file (module)
+
+*Inside the file (module) that wants to access the external variable
+
+    *The variable data type declared with word "extern" in declaration
+
+    *Tells compiler that globally defined variable from other file has to be used
+
+*if want to define an int variable called myNumber and want to use it in function of another file
+
+int myNumber=0;
+
+*Declare the obove on top of and at beginning of the program as a global variable
+
+*declare extern int myNumber; 
+
+    *The value of the myNumber can now be acessed in the new file after the declaration
+
+Static vs Extern variables
+
+*Situations arise in which we wanna declare the variable global but not external
+
+*wanna declare a variable global locally to a given file
+
+static int myNumber=0;
+
+declaring a variable globally with a static keyword will make it available to all the  
+function but not to outside the current file
+

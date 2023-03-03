@@ -2,3 +2,40 @@
 *Using makefile utilities can speed up development time
 
 *allows to specify a list of files and their dependencies in a file known as makefile
+
+*makefile only compiles the program when it finds it necessary
+    *it does that based on the modification time (if .c file is newer than .o)
+
+
+Example:
+
+SRC: mod1.c mod2.c main.C
+
+OBJ: mod1.o mod2.o  main.o
+
+PROG= myprogram$(PROG): $(OBJ)
+        gcc $(OBJ) -o $(PROG)
+
+$(OBJ): $(SRC)
+
+This makefile defines the set of source files(SRC) and the set of the object files(OBJ)
+
+*This makefile defines the name of the executable (PROG)
+
+*also defines some dependencies ($(PROG): $(OBJ))
+
+    *Says that the executable is dependent on the object file
+
+    * if one or more object file changes, the executable file needs to be rebuilt
+
+    *must be typed with a leading tab (gcc $(OBJ) -o $(PROG))
+
+Example of running makefile
+
+$ make
+
+gcc -c -o mod2.o mod2.C
+gcc -c -o main.o main.C
+gcc mod1.o mod2.o main.o -o myprogram
+
+$
