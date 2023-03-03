@@ -1,0 +1,30 @@
+suppose that we have divided our program into multiple files, in this case we can tell 
+the compiler at the run time to make the files at once.
+
+*include the name of the three files in the same file.
+
+$ gcc mod1.c mod2.c main.c -o dbtest
+
+the above has the effect of seperately compiling the code contained in mod1.c, mod2.c, 
+and main.C
+
+error found in the different files are shown seperately in the compiler.
+
+Compiler generates intermediate object files for each source file that it compiles
+
+places the resulting object code from compiling mod.c to mod.o by isDefault
+
+*replacing .c in the file and replacing it with .o tells the compiler to use the object file that was produced
+
+*the folllowing command can be used with the compiler that doesn't deletes the object code files
+
+cc mod1.o mod2.c main.o -o dbtest
+
+Can also use incremental compilation technique 
+
+gcc -c mod1.c    makes mod1 to mod1.o
+
+gcc -c mod2.c    makes mod2 to mod2.o
+
+gcc -c main.c    makes main.c to main.o
+

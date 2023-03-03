@@ -394,6 +394,62 @@ The function fopen() is used to open a file, it takes two arguments. First is th
 
 The use of function fputs().
 
-This function helps us to enter a string that is followed by a new-line or a null terminator.
+This function helps us to enter a string that is followed by a new-line or a null terminator. The null terminator is not
+added to the file. On the sucessfull entry we get a data. However on the case of the error we get EOF as the result.
+
+
+Syntax: int fputs (const char *str, FILE *fptr);
+
+************************************************************************************************************************
+
+
+The use of function fgets()
+
+char *fgets(char *str, int n, FILE *fPtr);
+
+This function is used to read characters from a file and these characters are then stored in the string pointed by str.
+
+It reads at most n-1 characters from the file until either a newline or an end of file is encountered or till n-1 char
+have been read. It appends the null character after the last character read to finally finish the string.
+
+
+************************************************************************************************************************
+
+Formatted I/O
+
+Use of the function fprintf()
+
+The function is same as printf() but it writes the formatted data in the file instead of the standard output (screen)
+
+This is same as printf() but has one additional parameter. Pointer to FILE type.
+
+fprintf(FILE *fptr, const char *format [,argument,.....]);
+
+************************************************************************************************************************
+
+Use of fscanf()
+
+same as scanf() but instead reads data from the file instead of user input.
+
+Has an extra argument of FILE pointer
+
+fscanf(FILE *fptr, const char *format[,address,....]);
+
+
+************************************************************************************************************************
+
+fwrite()
+
+Function used for writing entire block to a given file
+
+size_t fwrite(const void *ptr, size_t size, size_t n, FILE *fptr);
+
+if the write is sucessfull it will write n characters to the file and return n; on error it will return number less
+than n
+
+
+
+
+
 
 
