@@ -6,28 +6,28 @@
 #include "Chains.h"
 
 int hash(int key) {
-    return key % 10;
+    return key % 10;  //creating the hash code
 }
 
-void Insert(struct Node *H[], int key) {
+void Insert(struct Node *HashTable[], int key) {
     int index = hash(key);
-    SortedInsert(&H[index], key);
+    SortedInsert(&HashTable[index], key);
 }
 
 int main() {
-    struct Node *HT[10];
+    struct Node *HashTable[10];
     struct Node *temp;
     int i;
 
     for (i = 0; i < 10; i++) {
-        HT[i] = NULL;
+        HashTable[i] = NULL;
     }
 
-    Insert(HT, 12);
-    Insert(HT, 22);
-    Insert(HT, 42);
+    Insert(HashTable, 12);
+    Insert(HashTable, 22);
+    Insert(HashTable, 42);
 
-    temp = Search(HT[hash(12)], 12);
+    temp = Search(HashTable[hash(12)], 12);
 
     if (temp != NULL) {
         printf("%d ", temp->data);
