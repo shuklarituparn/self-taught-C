@@ -11,8 +11,8 @@ struct Node { //Node for the linked list that we're creating here
     struct Node *next;  //pointer of the type struct that'll store the next address
 };
 
-void SortedInsert(struct Node **Head, int key) {
-    struct Node *new_node, *q= NULL, *previous=*Head;
+void SortedInsert(struct Node **Head, int key) {  //**H pointer to the head of the linked list, key to be inserted
+    struct Node *new_node, *previous= NULL, *current=*Head;
     new_node=(struct Node*) malloc(sizeof(struct Node));
     new_node->data=key;
     new_node->next=NULL;
@@ -20,17 +20,17 @@ void SortedInsert(struct Node **Head, int key) {
     if(*Head==NULL)
         *Head=new_node;
     else{
-        while (previous&&previous->data<key){
-            q=previous;
-            previous=previous->next;
+        while (current&&current->data<key){
+            previous=current;
+            current=current->next;
         }
-        if(previous==*Head){
+        if(current==*Head){
             new_node->next=*Head;
             *Head=new_node;
         }
         else{
-            new_node->next=q->next;
-            q->next=new_node;
+            new_node->next=previous->next;
+            previous->next=new_node;
         }
     }
 }
@@ -44,5 +44,8 @@ struct Node *Search(struct Node *Head, int key) {
     }
     return NULL;
 }
-
+/*
+ * The search function takes two argument. A pointer to the head of the list and the key. It then traverses the
+ * list till it finds the element, if it does find it, it returns the pointer to that element, or it returns the nullptr
+ */
 #endif // CHAINS_H
