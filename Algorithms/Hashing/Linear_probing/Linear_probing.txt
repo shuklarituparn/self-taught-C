@@ -1,0 +1,25 @@
+This code implements linear probing as a collision resolution technique for hash tables. Linear probing is a method of
+resolving collisions by searching for the next available slot in the hash table when the original slot is already
+occupied.
+
+The code defines two functions, hash() and probe(), which are used to calculate the index of a key in the hash table and
+ to resolve collisions by probing for the next available slot in the hash table, respectively.
+
+The hash() function calculates the index of a key in the hash table by taking the modulus of the key with the size of
+ the hash table.
+
+The probe() function is called when there is a collision, i.e., when the calculated index of a key is already
+ by another key in the hash table. The probe() function searches for the next available slot in the hash table by
+ adding an incrementing index to the calculated index and taking the modulus with the size of the hash table until
+ an empty slot is found.
+
+The Insert() function inserts a key into the hash table by first calculating its index using the hash() function.
+If the calculated index is already occupied by another key, the probe() function is called to find the next available
+ slot in the hash table, and the key is inserted into that slot.
+
+The Search() function searches for a key in the hash table by first calculating its index using the hash() function.
+ If the calculated index does not contain the key, the probe() function is called to search for the key in the next
+ available slots in the hash table.
+
+Finally, the main() function creates an empty hash table of size 10 and inserts four keys into it using the Insert()
+ function. It then searches for the key 35 using the Search() function and prints the index of the key if it is found.
