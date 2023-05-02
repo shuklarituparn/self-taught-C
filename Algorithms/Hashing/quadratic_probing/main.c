@@ -4,11 +4,11 @@
 #include <stdio.h>
 #define SIZE 10
 
-int hash(int key) {
+int hash(int key) { //hash function that returns the hash val
     return key % SIZE;
 }
 
-int probe(int H[], int key) {
+int probe(int H[], int key) {  //Probe function that helps us find the next place available where we can place an element
     int index = hash(key);
     int i = 0;
     while (H[(index + i * i) % SIZE] != 0) {
