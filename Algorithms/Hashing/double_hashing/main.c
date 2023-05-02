@@ -6,37 +6,37 @@
 
 #define TABLE_SIZE 10
 
-int hash(int key) {
+int hash(int key) {// The hash function that returns the hash value after putting the key
     return key % TABLE_SIZE;
 }
 
-int hash2(int key) {
+int hash2(int key) {   //second hash function that takes a key and return the hash value
     return 7 - (key % 7);
 }
 
-void insert(int table[], int key) {
-    int index = hash(key);
-    int step = hash2(key);
-    int i = 1;
+void insert(int table[], int key) {  //The insert function that inserts an element into the hash table
+    int index = hash(key);  //first we get the first hash value that helps us to know where to place the first element
+    int step = hash2(key);  //we use the second hash function to calculate the step that we need to move to the next position
+    int i = 1; //the loop variable
 
-    while (table[index] != 0) {
-        index = (index + step) % TABLE_SIZE;
-        i++;
-        if (i == TABLE_SIZE) {
+    while (table[index] != 0) {  //while the index is not equal to zero
+        index = (index + step) % TABLE_SIZE; //we calculate the position where our element is supposed to go
+        i++;  //incrementing the loop variable
+        if (i == TABLE_SIZE) {    //if the table is full then print that table is full and we can't store no more
             printf("Table is full\n");
             return;
         }
     }
 
-    table[index] = key;
+    table[index] = key; //otherwise store the key in the index
 }
 
-int search(int table[], int key) {
-    int index = hash(key);
-    int step = hash2(key);
+int search(int table[], int key) { //search function
+    int index = hash(key); //calculating the index
+    int step = hash2(key); //calculating the step
     int i = 1;
 
-    while (table[index] != key) {
+    while (table[index] != key) { //looping through the table
         index = (index + step) % TABLE_SIZE;
         i++;
         if (table[index] == 0 || i == TABLE_SIZE) {
@@ -44,7 +44,7 @@ int search(int table[], int key) {
         }
     }
 
-    return index;
+    return index;  //returning the index if the element is found
 }
 
 int main() {
