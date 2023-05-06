@@ -10,7 +10,7 @@ struct Node
 {
     char data;
     struct Node *next;
-}*top=NULL;
+}*head=NULL;
 void push(char x)
 {
     struct Node *new_node;
@@ -19,33 +19,34 @@ void push(char x)
         printf("stack is full\n");
     else
     {
-        new_node->data=x;
-        new_node->next=top;
-        top=new_node;
+        new_node->data=x; //storing the data that we want to push in the data section of our node
+        new_node->next=head; //in the pointer section storing the location
+        head=new_node; //moving the head to the next node
     }
 }
 char pop()
 {
-    struct Node *t;
+    struct Node *current;
     char x=-1;
-    if(top==NULL)
+    if(head==NULL)
         printf("Stack is Empty\n");
     else
     {
-        t=top;
-        top=top->next;x=t->data;
-        free(t);
+        current=head;
+        head=head->next;
+        x=current->data;
+        free(current);
     }
     return x;
 }
 void Display()
 {
-    struct Node *p;
-    p=top;
-    while(p!=NULL)
+    struct Node *current;
+    current=head;
+    while(current!=NULL)
     {
-        printf("%d ",p->data);
-        p=p->next;
+        printf("%d ",current->data);
+        current=current->next;
     }
     printf("\n");
 }
@@ -58,12 +59,12 @@ int isBalanced(char *exp)
             push(exp[i]);
         else if(exp[i]==')')
         {
-            if(top==NULL)
+            if(head==NULL)
                 return 0;
             pop();
         }
     }
-    if(top==NULL)
+    if(head==NULL)
         return 1;
     else
         return 0;
